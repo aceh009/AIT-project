@@ -1,0 +1,19 @@
+<br>
+<div class="container" > 
+	<h1>Latest Posted Commodities</h1><br>
+
+	{{#each commodity}}
+		<div class="row" style="background:lightgray; border: 1px solid black; padding: 20px;">
+			<div class="col-md-3">
+			<img src={{url}}  style="width:150px; height: 150px">
+			</div>
+			<div class="col-md-5">
+			<b>Name:</b> {{productName}}<br>
+			<b>Price:</b> ${{price}}<br>
+			<b>Description:</b> {{description}}<br>
+			<b>Posted At:</b> {{postedAt}}<br>
+			</div>
+		</div>
+		<br><br>
+	{{/each}}
+</div>

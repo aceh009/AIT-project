@@ -1,0 +1,68 @@
+<h1>Manage Your Commodities</h1><br>
+
+<form method="POST" action="/ezsell/manage-commodities/add">
+
+</form>
+
+<div class="container-fluid">
+<div class="row">
+	<div class="col-md-5" style="margin-left:4%; margin-right:4%; margin-top: 4%; margin-bottom: 4%" >
+		<div class="card" style="background-color:lightgray; padding: 20px">
+			<h2><font size="5">Add Your Commodity:</font></h2><br>
+			<form method="POST" action="/ezsell/manage-commodities/add">
+				Product Name: <br><input type="text" name="productName" value=""><br>
+				Price: <br><input type="text" name="price" value=""><br>
+				Description: <br><input type="text" name="description" value=""><br>
+				Url Image: <br><input type="text" name="url" value=""><br><br><br><br>
+				<input style="float: left;" type="submit" class="btn btn-primary" value = 'Add'><br><br>
+			</form>
+		</div>
+	</div>
+
+	<div class="col-md-5" style="margin-left:4%; margin-right:4%; margin-top: 4%; margin-bottom: 4%" >
+		<div class="card" style="background-color:lightgray; padding: 20px">
+		<h2><font size="5">Edit Your Commodity:</font></h2><br>
+		<form method="POST" action="/ezsell/manage-commodities/edit">
+			<input type="hidden" name="hiddenSlug" value={{slug}}>
+			CommodityID: <br><input type="text" name="commodityID" value=""><br>
+			Product Name: <br><input type="text" name="productName" value=""><br>
+			Price: <br><input type="text" name="price" value=""><br>
+			Description: <br><input type="text" name="description" value=""><br>
+			Url Image: <br><input type="text" name="url" value=""><br><br>
+			<input style="float: left;" type="submit" class="btn btn-primary" value = 'Edit'><br><br>
+		</form>
+		</div>
+	</div>
+	<br>
+
+	<div class="col-md-11" style="margin-left:4%; margin-right:4%; margin-top: 4%; margin-bottom: 4%" >
+		<div class="card" style="background-color:lightgray; padding: 20px">
+			<br><h2><font size="5">Delete Your Commodity</font></h2><br><br>
+			<form method="POST" action="/ezsell/manage-commodities/delete">
+				<!-- <input type="hidden" name="hiddenSlug" value={{slug}}> -->
+				{{#each commodity}}
+					<div class="row" style="background-color:white; border: 1px solid black; padding: 20px;     margin-right: 20px; margin-left: 20px;">
+						<div class="col-md-4">
+						<input type="checkbox" name="checkbox" value={{_id}}>&nbsp&nbsp <!-- space -->
+						<img src={{url}}  style="width:150px; height: 150px">
+						</div>
+						<div class="col-md-5">
+						<b>Name:</b> {{productName}}<br>
+						<b>Price:</b> ${{price}}<br>
+						<b>Description:</b> {{description}}<br>
+						<b>Commodity ID:</b> {{_id}}<br>
+						<b>Posted At:</b> {{postedAt}}<br>
+						</div>
+					</div>
+					<br><br>
+				{{/each}}
+				<div class = "col-md-12" style="text-align: center">
+				<br><br><input type="submit" class="btn btn-primary" value ='Delete'><br><br>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>
+</div>
+

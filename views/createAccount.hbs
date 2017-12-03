@@ -1,0 +1,31 @@
+
+<br><br><br><h1>Create New Account</h1><br>
+
+<div class="container-fluid">
+	<div class="card" style="background-color:lightgray; padding: 10px; margin-left:20%; margin-right:20%">
+		<form method="POST" action="/ezsell/create-new-account">
+			<div class="row" style="margin-left:10%; margin-right:10%">
+				<div class="col-md-6" style="padding: 20px;">
+					<b><font size="5">Basic Info:</font></b><br><br>
+					<b>Username:</b><br><input type="text" name="username" value=""><br>
+					<b>Password:</b><br><input type="text" name="password" value=""><br>
+					<b>Name:</b><br><input type="text" name="name" value=""><br>
+					<b>Phone Number:</b><br><input type="text" name="phone" value=""><br><br><br>
+				</div>
+				<div class="col-md-6" style="padding: 20px;">
+					<b><font size="5">Address:</font></b><br><br>
+					<b>Street Address:</b><br><input type="text" name="street" value=""><br>
+					<b>City:</b><br><input type="text" name="city" value=""><br>
+					<b>State:</b><br><input type="text" name="state" value=""><br>
+					<b>Zip Code:</b><br><input type="text" name="zip" value=""><br><br><br>
+				</div>
+				<div class = "col-md-12" style="text-align: center">
+					<input class="btn btn-primary" type="submit" value = 'Create'><br><br><br>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<br><br><br>{{message}}

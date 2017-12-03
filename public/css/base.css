@@ -1,0 +1,60 @@
+body {
+	text-align: left;
+}
+
+h1{
+	text-align: center;
+}
+
+/*
+.formBtn{
+	margin-left: 80%;
+
+}
+*/
+
+/*
+p{
+	margin-left: 20%;
+	margin-right: 20%;
+
+}
+*/
+
+input[type="checkbox"]{
+	width: 20px; /*Desired width*/
+	height: 20px; /*Desired height*/
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: slategray;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  	z-index: 1000;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover*/
+li a:hover{
+    background-color: black;
+    color: white;
+
+}
